@@ -74,7 +74,8 @@ module.exports = (opts) ->
 
       # client-compile the file and add it to the store
       adapter.compileClient(ctx.original_content, {
-        filename: ctx.file.path
+        filename: ctx.file.path,
+        basedir: '.'
       }).then (out) =>
         # naming the template key
 
